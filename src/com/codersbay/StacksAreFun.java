@@ -51,16 +51,25 @@ public class StacksAreFun {
 
     public static int peek(List stack) {
         System.out.println("Value on top is: " + stack.get(stack.size() - 1));
-        return (int) (stack.get(stack.size() - 1));
+        if ((stack.size() == 0)) {
+            throw new IllegalArgumentException("Stack is already empty");
+        } else {
+            return (int) (stack.get(stack.size() - 1));
+        }
     }
 
     public static int[] pop(int n, List stack) {
-        int[] temp = new int[n];
-        for (int j = 0; j < n; j++) {
-            pop(stack);
-            temp[j] = pop(stack);
+        if ((stack.size() == 0)) {
+            throw new IllegalArgumentException("Stack is already empty");
+        } else {
+
+            int[] temp = new int[n];
+            for (int j = 0; j < n; j++) {
+                pop(stack);
+                temp[j] = pop(stack);
+            }
+            return temp;
         }
-        return temp;
     }
 
     public static void output(List<Integer> stack) {
