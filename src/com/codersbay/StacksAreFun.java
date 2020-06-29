@@ -9,11 +9,11 @@ public class StacksAreFun {
     public static void main(String[] args) {
         List<Integer> stack = new Stack<>();
         IntStack IntStack = new IntStack(stack);
-        IntStack.push(stack, 1249);
-        IntStack.push(stack, 1);
-        IntStack.push(stack, 9);
-        IntStack.push(stack, 5238);
-        IntStack.push(stack, 15014354);
+        IntStack.push(1249);
+        IntStack.push(1);
+        IntStack.push(9);
+        IntStack.push(5238);
+        IntStack.push(15014354);
         System.out.println();
 
         IntStack.output(stack);
@@ -22,8 +22,8 @@ public class StacksAreFun {
         IntStack.pop(stack);
         IntStack.peek(stack);
         IntStack.size(stack);
-        IntStack.push(stack, 44);
-        IntStack.push(stack, 332);
+        IntStack.push(44);
+        IntStack.push(332);
         IntStack.pop(3, stack);
         IntStack.size(stack);
 
