@@ -14,19 +14,19 @@ public class IntStack {
         stack.add(value);
     }
 
-    public int size(List stack) {
+    public int size() {
         System.out.println("Size is: " + stack.size());
         return (stack.size());
     }
 
-    public int pop(List stack) {
+    public int pop() {
         int tmp = (int) stack.get(stack.size() - 1);
         System.out.println(tmp + " has been removed from the top of the stack");
         stack.remove(stack.size() - 1);
         return tmp;
     }
 
-    public int peek(List stack) {
+    public int peek() {
         System.out.println("Value on top is: " + stack.get(stack.size() - 1));
         if ((stack.size() == 0)) {
             throw new IllegalArgumentException("Stack is already empty");
@@ -35,15 +35,15 @@ public class IntStack {
         }
     }
 
-    public int[] pop(int n, List stack) {
+    public int[] pop(int n) {
         if ((stack.size() == 0)) {
             throw new IllegalArgumentException("Stack is already empty");
         } else {
 
             int[] temp = new int[n];
             for (int j = 0; j < n; j++) {
-                pop(stack);
-                temp[j] = pop(stack);
+                pop();
+                temp[j] = pop();
             }
             return temp;
         }

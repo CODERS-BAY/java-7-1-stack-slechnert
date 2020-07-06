@@ -19,13 +19,13 @@ public class StacksAreFun {
         IntStack.output(stack);
         System.out.println();
 
-        IntStack.pop(stack);
-        IntStack.peek(stack);
-        IntStack.size(stack);
+        IntStack.pop();
+        IntStack.peek();
+        IntStack.size();
         IntStack.push(44);
         IntStack.push(332);
-        IntStack.pop(3, stack);
-        IntStack.size(stack);
+        IntStack.pop(3);
+        IntStack.size();
 
         //OUTPUT ALTERED CONTENT
         System.out.println();
